@@ -40,36 +40,6 @@ window.addEventListener('scroll', () => {
 });
 
 // ===================================
-// MOBILE MENU TOGGLE
-// ===================================
-
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileMenuBtn.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
-        });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
-        }
-    });
-}
-
-// ===================================
 // INTERSECTION OBSERVER FOR ANIMATIONS
 // ===================================
 

@@ -70,17 +70,22 @@ body {
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: none;
+    border-bottom: none;
+    box-shadow: none;
     transition: all 0.3s ease;
 }
 
 .nav-container {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 20px 24px;
+    padding: 20px 24px 20px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 .nav-logo {
@@ -130,23 +135,6 @@ body {
     width: 100%;
 }
 
-.mobile-menu-btn {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-}
-
-.mobile-menu-btn span {
-    width: 24px;
-    height: 2px;
-    background: var(--text-white);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
 
 /* ===================================
    BUTTONS
@@ -356,6 +344,11 @@ body {
     display: flex;
     gap: 16px;
     margin-bottom: 60px;
+}
+
+.hero-cta .btn-large {
+    min-width: 200px;
+    justify-content: center;
 }
 
 .hero-stats {
@@ -751,6 +744,10 @@ body {
     margin-top: 48px;
 }
 
+.download-btn-wrapper .btn-large {
+    justify-content: center;
+}
+
 /* ===================================
    COMMUNITY SECTION
    =================================== */
@@ -1111,68 +1108,7 @@ body {
     }
     
     .nav-links {
-        display: none;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.98);
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
-        flex-direction: column;
-        padding: 32px 24px;
-        gap: 16px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
-        z-index: 999;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        pointer-events: none;
-        max-height: calc(100vh - 80px);
-        overflow-y: auto;
-    }
-    
-    .nav-links.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: all;
-    }
-    
-    .nav-links a {
-        text-align: center;
-        padding: 16px 24px;
-        font-size: 18px;
-        font-weight: 600;
-        border: none;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
-    
-    .nav-links a:hover,
-    .nav-links a:active {
-        background: rgba(255, 255, 255, 0.1);
-        transform: scale(1.02);
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-        position: relative;
-        z-index: 1000;
-    }
-    
-    .mobile-menu-btn.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-    
-    .mobile-menu-btn.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-menu-btn.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        display: none !important;
     }
     
     .hero-content {
