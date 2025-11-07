@@ -1117,18 +1117,20 @@ body {
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         flex-direction: column;
-        padding: 40px 24px;
-        gap: 24px;
+        padding: 32px 24px;
+        gap: 16px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
         z-index: 999;
         opacity: 0;
         transform: translateY(-20px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         pointer-events: none;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
     
     .nav-links.active {
@@ -1140,13 +1142,19 @@ body {
     
     .nav-links a {
         text-align: center;
-        padding: 12px;
+        padding: 16px 24px;
         font-size: 18px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-weight: 600;
+        border: none;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        transition: all 0.3s ease;
     }
     
-    .nav-links a:last-child {
-        border-bottom: none;
+    .nav-links a:hover,
+    .nav-links a:active {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(1.02);
     }
     
     .mobile-menu-btn {
