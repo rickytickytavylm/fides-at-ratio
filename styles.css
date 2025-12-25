@@ -73,8 +73,7 @@ body {
     border: none;
     border-bottom: none;
     box-shadow: none;
-    will-change: backdrop-filter, background;
-    transform: translateZ(0);
+    transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -1124,28 +1123,7 @@ body {
         --section-padding: 60px;
     }
     
-    /* iOS 26 style glass navigation - liquid glass effect */
-    .nav {
-        background: rgba(0, 0, 0, 0.08) !important;
-        backdrop-filter: blur(30px) saturate(180%) !important;
-        -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
-        border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.03) inset;
-        will-change: backdrop-filter, background !important;
-        transform: translateZ(0) !important;
-    }
-    
-    .nav::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    }
-    
-    .nav-container {
+        .nav-container {
         padding: 14px 20px;
     }
     
